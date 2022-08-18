@@ -3,6 +3,10 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
+  def show
+    @list = List.find(params[:id])
+  end
+
   def new
     @list = List.new
   end
@@ -14,5 +18,11 @@ class ListsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def list_params
+    params.require(:list).permit(:name)
   end
 end
