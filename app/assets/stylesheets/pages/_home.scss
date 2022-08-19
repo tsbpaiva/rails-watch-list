@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+// HOW PARTIALS WORK:
+// you have to name elements with page-specific names. like card-home. you do all the work, get used to it
+
+
+.body-home {
+  background-color: rgb(231, 231, 231);
+}
+
+.h1-home {
+  letter-spacing: 1px;
+}
